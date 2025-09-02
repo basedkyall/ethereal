@@ -1,615 +1,979 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.2">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethereal AI: Australia's Sovereign AI Megacluster - Investment Opportunity</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --metallic-black: #1C2526;
+            --gunmetal-grey: #2C3E40;
+            --light-grey: #F8F9FA;
+            --rose-gold: #E8B4A0;
+            --success-green: #10B981;
+            --problem-red: #EF4444;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            background: var(--light-grey);
+            color: var(--metallic-black);
+            margin: 0;
+            padding: 0;
+        }
+        
+        .chart-container {
+            height: 400px;
+            margin: 20px 0;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, var(--metallic-black) 0%, var(--gunmetal-grey) 100%);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            position: relative;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="0.5" fill="rgba(255,255,255,0.05)"/><circle cx="75" cy="75" r="0.3" fill="rgba(255,255,255,0.03)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+        }
+        
+        h1, h2 {
+            color: var(--metallic-black);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .section-header {
+            color: var(--metallic-black);
+            border-bottom: 3px solid var(--rose-gold);
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .premium-card {
+            background: white;
+            border: 1px solid #E5E7EB;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+            transition: all 0.3s ease;
+        }
+        
+        .premium-card:hover {
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+            transform: translateY(-2px);
+        }
+        
+        .metallic-accent {
+            background: linear-gradient(135deg, var(--metallic-black) 0%, var(--gunmetal-grey) 100%);
+            color: white;
+        }
+        
+        .rose-gold-accent {
+            background: linear-gradient(135deg, var(--rose-gold) 0%, #F4C2A1 100%);
+            color: var(--metallic-black);
+        }
+        
+        .quote-box {
+            background: linear-gradient(135deg, rgba(232, 180, 160, 0.1) 0%, rgba(232, 180, 160, 0.05) 100%);
+            border-left: 4px solid var(--rose-gold);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .quote-box::before {
+            content: '"';
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            font-size: 4rem;
+            color: var(--rose-gold);
+            opacity: 0.3;
+            font-family: serif;
+        }
+        
+        .icon-metallic {
+            color: var(--metallic-black);
+        }
+        
+        .border-metallic {
+            border-color: var(--metallic-black);
+        }
+        
+        .bg-problem {
+            background: rgba(239, 68, 68, 0.05);
+            border-left: 4px solid var(--problem-red);
+        }
+        
+        .bg-success {
+            background: rgba(16, 185, 129, 0.05);
+            border-left: 4px solid var(--success-green);
+        }
+        
+        .text-rose-gold {
+            color: var(--rose-gold);
+        }
+        
+        .text-metallic {
+            color: var(--metallic-black);
+        }
+        
+        .text-gunmetal {
+            color: var(--gunmetal-grey);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        @media print {
+            body { 
+                print-color-adjust: exact; 
+                -webkit-print-color-adjust: exact;
+            }
+            .chart-container {
+                height: 350px;
+            }
+            .premium-card {
+                break-inside: avoid;
+            }
+        }
+    </style>
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="en"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Australia's Sovereign AI Megacluster - Investment Memo&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdn.jsdelivr.net/npm/chart.js"&gt;&lt;/script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-family: 'Inter', sans-serif;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>line-height: 1.6;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.chart-container {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>height: 400px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin: 20px 0;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>@media print {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>body {<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">                </span>print-color-adjust: exact;<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">                </span>-webkit-print-color-adjust: exact;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body class="bg-gray-50 text-gray-900"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="max-w-6xl mx-auto bg-white shadow-2xl"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Header --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;header class="bg-gradient-to-r from-blue-900 to-indigo-800 text-white p-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="text-center"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;h1 class="text-4xl font-bold mb-4"&gt;INVESTMENT MEMO&lt;/h1&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;h2 class="text-2xl font-semibold mb-2"&gt;Australia's Sovereign AI Megacluster&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="text-xl text-blue-100"&gt;Critical Infrastructure for National Security and Economic Sovereignty&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="mt-6 text-sm text-blue-200"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;i class="fas fa-calendar-alt mr-2"&gt;&lt;/i&gt;August 2025</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/header&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Executive Summary --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;section class="p-8 border-b border-gray-200"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="text-3xl font-bold text-blue-900 mb-6 flex items-center"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;i class="fas fa-chart-line mr-3 text-blue-600"&gt;&lt;/i&gt;Executive Summary</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="bg-blue-50 p-6 rounded-lg mb-6"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="text-lg mb-4"&gt;Australia stands at a critical inflection point in the global AI revolution. While other nations secure their AI sovereignty through strategic infrastructure investments, Australia faces the risk of permanent technological dependence. The proposed sovereign AI megacluster represents more than infrastructure—it's the foundation for Australia's participation as a leader, not a spectator, in the AI-driven economy.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="grid md:grid-cols-2 gap-6"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="bg-green-50 p-6 rounded-lg border-l-4 border-green-500"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-xl font-semibold text-green-800 mb-3"&gt;Key Investment Highlights&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;ul class="space-y-2 text-green-700"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;&lt;strong&gt;Market Opportunity:&lt;/strong&gt; AUD $9.41B → $43.71B by 2034 (16.6% CAGR)&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;&lt;strong&gt;Capital Requirement:&lt;/strong&gt; AUD $31.6M for Phase 1&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;&lt;strong&gt;Revenue Projection:&lt;/strong&gt; AUD $15M by Year 3, 30% margins&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;&lt;strong&gt;Strategic Value:&lt;/strong&gt; Critical national infrastructure&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">                </span></p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="bg-red-50 p-6 rounded-lg border-l-4 border-red-500"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-xl font-semibold text-red-800 mb-3"&gt;National Security Imperative&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;ul class="space-y-2 text-red-700"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;Supply chain vulnerability mitigation&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;Data sovereignty protection&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;Economic independence from foreign AI&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;Strategic technology control&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Market Opportunity Chart --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;section class="p-8 border-b border-gray-200"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="text-3xl font-bold text-blue-900 mb-6 flex items-center"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;i class="fas fa-chart-area mr-3 text-blue-600"&gt;&lt;/i&gt;Market Opportunity Analysis</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/h2&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="grid md:grid-cols-2 gap-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-xl font-semibold mb-4"&gt;Australian AI Market Growth Projection&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="chart-container"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;canvas id="marketGrowthChart"&gt;&lt;/canvas&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">                </span></p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-xl font-semibold mb-4"&gt;Revenue Projections by Segment&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="chart-container"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;canvas id="revenueSegmentChart"&gt;&lt;/canvas&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="mt-8 bg-yellow-50 p-6 rounded-lg border-l-4 border-yellow-500"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3 class="text-xl font-semibold text-yellow-800 mb-3"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;i class="fas fa-exclamation-triangle mr-2"&gt;&lt;/i&gt;Supply Chain Vulnerability: Clear and Present Danger</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="text-yellow-700 mb-4"&gt;Recent geopolitical events demonstrate the fragility of global technology supply chains. Nvidia faces $4.5B revenue losses from U.S.-China export controls, creating unprecedented disruptions across the semiconductor industry.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="grid md:grid-cols-2 gap-4"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h4 class="font-semibold text-yellow-800"&gt;Current Risks:&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;ul class="text-sm text-yellow-700 mt-2 space-y-1"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;li&gt;• Service termination during geopolitical tensions&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;li&gt;• Sensitive data processed offshore&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;li&gt;• No control over AI model training and bias&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;li&gt;• Vulnerability to foreign surveillance&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h4 class="font-semibold text-yellow-800"&gt;U.S. Government Response:&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;ul class="text-sm text-yellow-700 mt-2 space-y-1"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;li&gt;• OpenAI: $200M defense contract&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;li&gt;• Anduril &amp; Palantir: Strategic partnerships&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;li&gt;• CoreWeave: $6B infrastructure commitment&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;li&gt;• Tier-1 access to cutting-edge AI capabilities&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- CoreWeave Success Story --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;section class="p-8 border-b border-gray-200"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="text-3xl font-bold text-blue-900 mb-6 flex items-center"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;i class="fas fa-rocket mr-3 text-blue-600"&gt;&lt;/i&gt;Proven U.S. Model: CoreWeave's Success Blueprint</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/h2&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="bg-blue-50 p-6 rounded-lg mb-6"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3 class="text-2xl font-semibold text-blue-800 mb-4"&gt;The CoreWeave Phenomenon&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="text-blue-700 mb-4"&gt;CoreWeave's extraordinary growth demonstrates the explosive demand for sovereign AI infrastructure, validating the model Australia must replicate.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="grid md:grid-cols-3 gap-6 mb-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-green-500"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h4 class="text-lg font-semibold text-green-800 mb-2"&gt;Q2 2025 Revenue&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-3xl font-bold text-green-600"&gt;$1.21B&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-sm text-green-600"&gt;207% YoY Growth&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">                </span></p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-blue-500"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h4 class="text-lg font-semibold text-blue-800 mb-2"&gt;Revenue Backlog&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-3xl font-bold text-blue-600"&gt;$30.1B&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-sm text-blue-600"&gt;Contracted Future Revenue&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">                </span></p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-purple-500"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h4 class="text-lg font-semibold text-purple-800 mb-2"&gt;Adjusted EBITDA&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-3xl font-bold text-purple-600"&gt;$753M&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-sm text-purple-600"&gt;62% Margin&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="chart-container mb-6"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3 class="text-xl font-semibold mb-4"&gt;Market Size Comparison&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;canvas id="coreweaveComparisonChart"&gt;&lt;/canvas&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Financial Projections --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;section class="p-8 border-b border-gray-200"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="text-3xl font-bold text-blue-900 mb-6 flex items-center"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;i class="fas fa-calculator mr-3 text-blue-600"&gt;&lt;/i&gt;Financial Projections and Returns</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/h2&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="grid md:grid-cols-2 gap-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-xl font-semibold mb-4"&gt;Revenue Growth Projection&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="chart-container"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;canvas id="revenueProjectionChart"&gt;&lt;/canvas&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">                </span></p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-xl font-semibold mb-4"&gt;Profit Margin Evolution&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="chart-container"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;canvas id="marginChart"&gt;&lt;/canvas&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="mt-8 grid md:grid-cols-3 gap-6"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="bg-gray-50 p-6 rounded-lg"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h4 class="text-lg font-semibold text-gray-800 mb-4"&gt;Phase 1: Foundation (0-18 months)&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;ul class="text-sm text-gray-600 space-y-2"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;• Capital: AUD $31.6M&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;• Maincode anchor tenancy&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;• Security clearance completion&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;• Initial infrastructure deployment&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">                </span></p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="bg-green-50 p-6 rounded-lg"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h4 class="text-lg font-semibold text-green-800 mb-4"&gt;Phase 2: Growth (18-36 months)&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;ul class="text-sm text-green-600 space-y-2"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;• Revenue: AUD $15M by Year 3&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;• Net margins: 30%&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;• Capacity expansion&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;• Government contract scaling&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">                </span></p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="bg-blue-50 p-6 rounded-lg"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h4 class="text-lg font-semibold text-blue-800 mb-4"&gt;Phase 3: Leadership (36+ months)&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;ul class="text-sm text-blue-600 space-y-2"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;• Market leadership position&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;• Interstate expansion&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;• Strategic partnerships&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;• Exit opportunities&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Risk Analysis --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;section class="p-8 border-b border-gray-200"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="text-3xl font-bold text-blue-900 mb-6 flex items-center"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;i class="fas fa-shield-alt mr-3 text-blue-600"&gt;&lt;/i&gt;Risk Analysis and Mitigation</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/h2&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="grid md:grid-cols-2 gap-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-xl font-semibold mb-4"&gt;Risk Assessment Matrix&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="chart-container"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;canvas id="riskAssessmentChart"&gt;&lt;/canvas&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">                </span></p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="space-y-6"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="bg-red-50 p-4 rounded-lg border-l-4 border-red-400"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h4 class="font-semibold text-red-800"&gt;Demand Risk&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="text-sm text-red-600 mt-2"&gt;Mitigation: Validated demand through government imperative and Maincode anchor tenancy&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">                    </span></p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-400"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h4 class="font-semibold text-yellow-800"&gt;Technical Risk&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="text-sm text-yellow-600 mt-2"&gt;Mitigation: Proven infrastructure models following CoreWeave blueprint with NVIDIA partnership&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">                    </span></p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="bg-orange-50 p-4 rounded-lg border-l-4 border-orange-400"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h4 class="font-semibold text-orange-800"&gt;Competitive Risk&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="text-sm text-orange-600 mt-2"&gt;Mitigation: First-mover advantage with high barriers through security clearances&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">                    </span></p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="bg-green-50 p-4 rounded-lg border-l-4 border-green-400"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h4 class="font-semibold text-green-800"&gt;Regulatory Risk&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="text-sm text-green-600 mt-2"&gt;Mitigation: Proactive compliance framework aligned with government AI strategy&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Implementation Roadmap --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;section class="p-8 border-b border-gray-200"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="text-3xl font-bold text-blue-900 mb-6 flex items-center"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;i class="fas fa-road mr-3 text-blue-600"&gt;&lt;/i&gt;Implementation Roadmap</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/h2&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="relative"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="absolute left-8 top-0 bottom-0 w-1 bg-blue-300"&gt;&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">                </span></p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="space-y-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="relative flex items-start"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="flex-shrink-0 w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg"&gt;1&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="ml-6 bg-blue-50 p-6 rounded-lg flex-1"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;h3 class="text-xl font-semibold text-blue-800 mb-2"&gt;Phase 1: Foundation (Months 1-18)&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;ul class="text-blue-700 space-y-1"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;li&gt;• Secure Maincode partnership for anchor tenancy&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;li&gt;• Complete government security clearance processes&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;li&gt;• Install core infrastructure supporting initial AI workloads&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;li&gt;• Establish compliance frameworks for sovereign operations&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">                    </span></p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="relative flex items-start"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="flex-shrink-0 w-16 h-16 bg-green-600 rounded-full flex items-center justify-center text-white font-bold text-lg"&gt;2&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="ml-6 bg-green-50 p-6 rounded-lg flex-1"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;h3 class="text-xl font-semibold text-green-800 mb-2"&gt;Phase 2: Ecosystem Development (Months 18-36)&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;ul class="text-green-700 space-y-1"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;li&gt;• Expand capacity for multiple sovereign AI initiatives&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;li&gt;• Develop university research partnerships&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;li&gt;• Create Australian AI startup support programs&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;li&gt;• Scale government contract portfolio&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">                    </span></p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="relative flex items-start"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="flex-shrink-0 w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold text-lg"&gt;3&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="ml-6 bg-purple-50 p-6 rounded-lg flex-1"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;h3 class="text-xl font-semibold text-purple-800 mb-2"&gt;Phase 3: Market Leadership (Months 36+)&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;ul class="text-purple-700 space-y-1"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;li&gt;• Establish position as Australia's sovereign AI leader&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;li&gt;• Consider interstate expansion supporting national ecosystem&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;li&gt;• Evaluate strategic partnership or exit opportunities&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;li&gt;• Support next phase of Australian AI sovereignty&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Conclusion --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;section class="p-8 bg-gradient-to-r from-blue-900 to-indigo-800 text-white"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="text-3xl font-bold mb-6 flex items-center"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;i class="fas fa-flag mr-3"&gt;&lt;/i&gt;The Moment of Decision</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/h2&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="grid md:grid-cols-2 gap-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="bg-red-900 bg-opacity-50 p-6 rounded-lg"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-xl font-semibold mb-4 text-red-200"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;i class="fas fa-times-circle mr-2"&gt;&lt;/i&gt;Consequences of Inaction</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;ul class="space-y-2 text-red-100"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;• Permanent reliance on foreign AI providers&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;• Continued export of Australian AI talent&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;• Strategic vulnerability during geopolitical tension&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;• Economic subjugation in AI-driven global economy&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">                </span></p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="bg-green-900 bg-opacity-50 p-6 rounded-lg"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-xl font-semibold mb-4 text-green-200"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;i class="fas fa-check-circle mr-2"&gt;&lt;/i&gt;Opportunity for Action</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;ul class="space-y-2 text-green-100"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;• AUD $31.6M investment in critical infrastructure&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;• Conservative 30% margins with upside potential&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;• Foundation of Australia's AI sovereignty&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;• Generational wealth through AI ownership&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="mt-8 text-center bg-white bg-opacity-10 p-8 rounded-lg"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3 class="text-2xl font-bold mb-4"&gt;Australia's Declaration of Technological Independence&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="text-xl mb-6"&gt;The sovereign AI megacluster represents more than an investment opportunity—it's Australia's declaration of technological independence and economic sovereignty.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="text-2xl font-bold text-yellow-300"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>This is Australia's moment. The question is not whether we can afford to invest, but whether we can afford not to.</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Footer --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;footer class="p-6 bg-gray-100 text-gray-600 text-sm"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="text-center"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;strong&gt;Sources:&lt;/strong&gt; CoreWeave investor reports, Australian government AI ecosystem analysis, market research from IMARC, Statista, and industry publications. All financial projections based on comparable company analysis and conservative market assumptions.</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/footer&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>// Market Growth Chart</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const ctx1 = document.getElementById('marketGrowthChart').getContext('2d');</p>
-<p class="p1"><span class="Apple-converted-space">        </span>new Chart(ctx1, {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>type: 'line',</p>
-<p class="p1"><span class="Apple-converted-space">            </span>data: {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>labels: ['2024', '2025', '2026', '2027', '2028', '2029', '2030', '2031', '2032', '2033', '2034'],</p>
-<p class="p1"><span class="Apple-converted-space">                </span>datasets: [{</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>label: 'Australian AI Market (AUD Billions)',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>data: [9.41, 11.0, 12.8, 15.0, 17.5, 20.4, 23.8, 27.7, 32.3, 37.7, 43.71],</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>borderColor: 'rgb(59, 130, 246)',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>backgroundColor: 'rgba(59, 130, 246, 0.1)',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>tension: 0.1,</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>fill: true</p>
-<p class="p1"><span class="Apple-converted-space">                </span>}]</p>
-<p class="p1"><span class="Apple-converted-space">            </span>},</p>
-<p class="p1"><span class="Apple-converted-space">            </span>options: {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>responsive: true,</p>
-<p class="p1"><span class="Apple-converted-space">                </span>maintainAspectRatio: false,</p>
-<p class="p1"><span class="Apple-converted-space">                </span>scales: {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>y: {</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>beginAtZero: true,</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>title: {</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>display: true,</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>text: 'Market Size (AUD Billions)'</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">                </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>});</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>// Revenue Segment Chart</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const ctx2 = document.getElementById('revenueSegmentChart').getContext('2d');</p>
-<p class="p1"><span class="Apple-converted-space">        </span>new Chart(ctx2, {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>type: 'doughnut',</p>
-<p class="p1"><span class="Apple-converted-space">            </span>data: {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>labels: ['Government', 'Enterprise', 'Research', 'Startups'],</p>
-<p class="p1"><span class="Apple-converted-space">                </span>datasets: [{</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>data: [40, 35, 15, 10],</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>backgroundColor: [</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>'rgba(59, 130, 246, 0.8)',</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>'rgba(16, 185, 129, 0.8)',</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>'rgba(245, 158, 11, 0.8)',</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>'rgba(139, 92, 246, 0.8)'</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>]</p>
-<p class="p1"><span class="Apple-converted-space">                </span>}]</p>
-<p class="p1"><span class="Apple-converted-space">            </span>},</p>
-<p class="p1"><span class="Apple-converted-space">            </span>options: {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>responsive: true,</p>
-<p class="p1"><span class="Apple-converted-space">                </span>maintainAspectRatio: false,</p>
-<p class="p1"><span class="Apple-converted-space">                </span>plugins: {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>legend: {</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>position: 'bottom'</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">                </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>});</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>// CoreWeave Comparison Chart - Updated to Market Size Only</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const ctx3 = document.getElementById('coreweaveComparisonChart').getContext('2d');</p>
-<p class="p1"><span class="Apple-converted-space">        </span>new Chart(ctx3, {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>type: 'bar',</p>
-<p class="p1"><span class="Apple-converted-space">            </span>data: {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>labels: ['CoreWeave Revenue Backlog (USD)', 'Australia AI Market 2034 (AUD)'],</p>
-<p class="p1"><span class="Apple-converted-space">                </span>datasets: [{</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>label: 'Market Size (Billions)',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>data: [30.1, 43.71],</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>backgroundColor: ['rgba(59, 130, 246, 0.8)', 'rgba(16, 185, 129, 0.8)'],</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>borderColor: ['rgb(59, 130, 246)', 'rgb(16, 185, 129)'],</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>borderWidth: 2</p>
-<p class="p1"><span class="Apple-converted-space">                </span>}]</p>
-<p class="p1"><span class="Apple-converted-space">            </span>},</p>
-<p class="p1"><span class="Apple-converted-space">            </span>options: {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>responsive: true,</p>
-<p class="p1"><span class="Apple-converted-space">                </span>maintainAspectRatio: false,</p>
-<p class="p1"><span class="Apple-converted-space">                </span>plugins: {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>title: {</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>display: true,</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>text: 'Market Size Comparison: CoreWeave vs Australia AI Opportunity',</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>font: {</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>size: 16,</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>weight: 'bold'</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>},</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>padding: 20</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>},</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>legend: {</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>display: false</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">                </span>},</p>
-<p class="p1"><span class="Apple-converted-space">                </span>scales: {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>y: {</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>beginAtZero: true,</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>title: {</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>display: true,</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>text: 'Market Size (Billions)',</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>font: {</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>size: 12,</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>weight: 'bold'</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>},</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>grid: {</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>color: 'rgba(0, 0, 0, 0.1)'</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>},</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>x: {</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>title: {</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>display: true,</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>text: 'Market Categories',</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>font: {</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>size: 12,</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>weight: 'bold'</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">                </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>});</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>// Revenue Projection Chart</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const ctx4 = document.getElementById('revenueProjectionChart').getContext('2d');</p>
-<p class="p1"><span class="Apple-converted-space">        </span>new Chart(ctx4, {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>type: 'line',</p>
-<p class="p1"><span class="Apple-converted-space">            </span>data: {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>labels: ['Year 1', 'Year 2', 'Year 3', 'Year 4', 'Year 5'],</p>
-<p class="p1"><span class="Apple-converted-space">                </span>datasets: [{</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>label: 'Conservative (AUD M)',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>data: [2, 8, 15, 25, 40],</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>borderColor: 'rgb(16, 185, 129)',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>backgroundColor: 'rgba(16, 185, 129, 0.1)',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>tension: 0.1,</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>fill: true</p>
-<p class="p1"><span class="Apple-converted-space">                </span>}, {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>label: 'Optimistic (AUD M)',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>data: [3, 12, 22, 38, 60],</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>borderColor: 'rgb(59, 130, 246)',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>backgroundColor: 'rgba(59, 130, 246, 0.1)',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>tension: 0.1,</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>fill: true</p>
-<p class="p1"><span class="Apple-converted-space">                </span>}]</p>
-<p class="p1"><span class="Apple-converted-space">            </span>},</p>
-<p class="p1"><span class="Apple-converted-space">            </span>options: {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>responsive: true,</p>
-<p class="p1"><span class="Apple-converted-space">                </span>maintainAspectRatio: false,</p>
-<p class="p1"><span class="Apple-converted-space">                </span>scales: {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>y: {</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>beginAtZero: true,</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>title: {</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>display: true,</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>text: 'Revenue (AUD Millions)'</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">                </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>});</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>// Margin Chart</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const ctx5 = document.getElementById('marginChart').getContext('2d');</p>
-<p class="p1"><span class="Apple-converted-space">        </span>new Chart(ctx5, {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>type: 'line',</p>
-<p class="p1"><span class="Apple-converted-space">            </span>data: {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>labels: ['Year 1', 'Year 2', 'Year 3', 'Year 4', 'Year 5'],</p>
-<p class="p1"><span class="Apple-converted-space">                </span>datasets: [{</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>label: 'Net Margin (%)',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>data: [5, 20, 30, 35, 40],</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>borderColor: 'rgb(139, 92, 246)',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>backgroundColor: 'rgba(139, 92, 246, 0.1)',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>tension: 0.1,</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>fill: true</p>
-<p class="p1"><span class="Apple-converted-space">                </span>}]</p>
-<p class="p1"><span class="Apple-converted-space">            </span>},</p>
-<p class="p1"><span class="Apple-converted-space">            </span>options: {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>responsive: true,</p>
-<p class="p1"><span class="Apple-converted-space">                </span>maintainAspectRatio: false,</p>
-<p class="p1"><span class="Apple-converted-space">                </span>scales: {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>y: {</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>beginAtZero: true,</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>max: 50,</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>title: {</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>display: true,</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>text: 'Profit Margin (%)'</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">                </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>});</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>// Risk Assessment Chart</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const ctx6 = document.getElementById('riskAssessmentChart').getContext('2d');</p>
-<p class="p1"><span class="Apple-converted-space">        </span>new Chart(ctx6, {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>type: 'scatter',</p>
-<p class="p1"><span class="Apple-converted-space">            </span>data: {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>datasets: [{</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>label: 'Demand Risk',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>data: [{x: 3, y: 8}],</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>backgroundColor: 'rgba(239, 68, 68, 0.8)',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>pointRadius: 12</p>
-<p class="p1"><span class="Apple-converted-space">                </span>}, {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>label: 'Technical Risk',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>data: [{x: 4, y: 6}],</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>backgroundColor: 'rgba(245, 158, 11, 0.8)',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>pointRadius: 12</p>
-<p class="p1"><span class="Apple-converted-space">                </span>}, {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>label: 'Competitive Risk',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>data: [{x: 5, y: 7}],</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>backgroundColor: 'rgba(249, 115, 22, 0.8)',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>pointRadius: 12</p>
-<p class="p1"><span class="Apple-converted-space">                </span>}, {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>label: 'Regulatory Risk',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>data: [{x: 2, y: 4}],</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>backgroundColor: 'rgba(16, 185, 129, 0.8)',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>pointRadius: 12</p>
-<p class="p1"><span class="Apple-converted-space">                </span>}]</p>
-<p class="p1"><span class="Apple-converted-space">            </span>},</p>
-<p class="p1"><span class="Apple-converted-space">            </span>options: {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>responsive: true,</p>
-<p class="p1"><span class="Apple-converted-space">                </span>maintainAspectRatio: false,</p>
-<p class="p1"><span class="Apple-converted-space">                </span>scales: {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>x: {</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>title: {</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>display: true,</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>text: 'Impact (1-10)'</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>},</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>min: 0,</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>max: 10</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>},</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>y: {</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>title: {</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>display: true,</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>text: 'Likelihood (1-10)'</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>},</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>min: 0,</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>max: 10</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">                </span>},</p>
-<p class="p1"><span class="Apple-converted-space">                </span>plugins: {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>legend: {</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>position: 'bottom'</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">                </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>});</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+    <div class="container">
+        
+        <!-- Header -->
+        <header class="header">
+            <div class="text-center relative z-10">
+                <h1 class="text-5xl font-bold mb-4 text-white">ETHEREAL AI</h1>
+                <h2 class="text-3xl font-semibold mb-2 text-white">Australia's Sovereign AI Megacluster</h2>
+                <p class="text-xl" style="color: var(--rose-gold);">Critical Infrastructure for National Security and Economic Sovereignty</p>
+                <div class="mt-6 text-sm" style="color: rgba(232, 180, 160, 0.8);">
+                    <i class="fas fa-calendar-alt mr-2"></i>August 2025 • Phase 1 Funding Round
+                </div>
+            </div>
+        </header>
+
+        <!-- Executive Summary -->
+        <section class="p-8 border-b border-gray-200">
+            <h2 class="text-4xl font-bold section-header flex items-center">
+                <i class="fas fa-chart-line mr-4 icon-metallic"></i>Executive Summary
+            </h2>
+            <div class="premium-card p-6 mb-8">
+                <p class="text-lg mb-4 text-gunmetal leading-relaxed">Australia stands at a critical inflection point in the global AI revolution. While other nations secure their AI sovereignty through strategic infrastructure investments, Australia faces the risk of permanent technological dependence. The proposed sovereign AI megacluster represents more than infrastructure—it's the foundation for Australia's participation as a leader, not a spectator, in the AI-driven economy.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="premium-card metallic-accent p-6" style="border-left: 4px solid var(--rose-gold);">
+                    <h4 class="text-lg font-semibold mb-3 text-rose-gold">Seed Funding Target</h4>
+                    <div class="text-center">
+                        <p class="text-4xl font-bold text-white">$10M</p>
+                        <p class="text-sm text-rose-gold">SAFE: $50M cap or 20% discount</p>
+                    </div>
+                    <ul class="space-y-1 mt-3 text-sm text-gray-200">
+                        <li>• Phase 1 Requirements: $10M</li>
+                        <li>• Full funding allocation</li>
+                        <li>• 9-Month Timeline</li>
+                    </ul>
+                </div>
+                
+                <div class="premium-card metallic-accent p-6" style="border-left: 4px solid var(--rose-gold);">
+                    <h4 class="text-lg font-semibold mb-3 text-rose-gold">Government Market</h4>
+                    <div class="text-center">
+                        <p class="text-4xl font-bold text-white">$2.8B</p>
+                        <p class="text-sm text-rose-gold">Federal IT Investment</p>
+                    </div>
+                    <ul class="space-y-1 mt-3 text-sm text-gray-200">
+                        <li>• Targeting PROTECTED & SECRET ~95%</li>
+                        <li>• Zero Australian providers</li>
+                        <li>• First-mover advantage</li>
+                    </ul>
+                </div>
+                
+                <div class="premium-card metallic-accent p-6" style="border-left: 4px solid var(--rose-gold);">
+                    <h4 class="text-lg font-semibold mb-3 text-rose-gold">Sovereign AI Market</h4>
+                    <div class="text-center">
+                        <p class="text-4xl font-bold text-white">$52B</p>
+                        <p class="text-sm text-rose-gold">Total Addressable Market</p>
+                    </div>
+                    <ul class="space-y-1 mt-3 text-sm text-gray-200">
+                        <li>• CSIRO and research institutes</li>
+                        <li>• Critical Infrastructure</li>
+                        <li>• Private Data Custodians</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problem Statement -->
+        <section class="p-8 border-b border-gray-200">
+            <h2 class="text-4xl font-bold section-header flex items-center">
+                <i class="fas fa-exclamation-triangle mr-4" style="color: var(--problem-red);"></i>The Critical Problem
+            </h2>
+
+            <!-- Strategic Quote -->
+            <div class="premium-card metallic-accent p-8 mb-6" style="border-left: 4px solid var(--rose-gold);">
+                <blockquote class="text-xl font-medium text-white italic mb-4 relative z-10">
+                    "Some problems are too important to outsource, and some capabilities are too strategic to leave to others. Starting small, starting sovereign, and starting now is the path to both impact and confidence."
+                </blockquote>
+                <cite class="text-rose-gold font-semibold text-right block">— Dave Lemphers, Maincode</cite>
+            </div>
+            
+            <div class="premium-card bg-problem p-6 mb-6">
+                <h3 class="text-2xl font-semibold mb-4" style="color: var(--problem-red);">Australia's AI Infrastructure Gap</h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="font-semibold mb-3 text-metallic">Market Void</h4>
+                        <ul class="space-y-2 text-gunmetal">
+                            <li>• No Australian sovereign AI Infrastructure providers serve the Federal Government market</li>
+                            <li>• Zero providers with PROTECTED/SECRET clearance capabilities</li>
+                            <li>• Complete dependency on foreign AI infrastructure</li>
+                            <li>• Government agencies forced to use offshore solutions</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold mb-3 text-metallic">Technical Barriers</h4>
+                        <ul class="space-y-2 text-gunmetal">
+                            <li>• Latency, bandwidth, and data sovereignty issues hinder AI adoption in Canberra</li>
+                            <li>• Sensitive data processed in foreign jurisdictions</li>
+                            <li>• No control over AI model training and bias</li>
+                            <li>• Vulnerability to supply chain disruptions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="premium-card p-6 border-l-4 border-metallic">
+                <h3 class="text-xl font-semibold mb-3 text-metallic">
+                    <i class="fas fa-globe mr-2"></i>Global Context: Supply Chain Vulnerabilities
+                </h3>
+                <p class="text-gunmetal mb-4">Recent geopolitical events demonstrate the fragility of global technology supply chains. Nvidia faces $4.5B revenue losses from U.S.-China export controls, creating unprecedented disruptions across the semiconductor industry. Australia's complete dependence on foreign AI infrastructure creates similar vulnerabilities.</p>
+            </div>
+        </section>
+
+        <!-- Ethereal AI Solution -->
+        <section class="p-8 border-b border-gray-200">
+            <h2 class="text-4xl font-bold section-header flex items-center">
+                <i class="fas fa-server mr-4 icon-metallic"></i>Ethereal AI: Sovereign AI Mega Cluster
+            </h2>
+            
+            <div class="premium-card metallic-accent p-6 mb-8" style="border-left: 4px solid var(--rose-gold);">
+                <h3 class="text-2xl font-semibold mb-4 text-rose-gold">Australia's First Token-Powered AI Infrastructure</h3>
+                <p class="text-lg mb-4 leading-relaxed text-white">Ethereal AI's megacluster represents a revolutionary approach to AI infrastructure, designed specifically for Australia's unique sovereignty requirements. Our large-scale data centre, built and operated with cutting-edge NVIDIA GPUs, produces the essential 'tokens' that power the AI revolution.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <div class="premium-card metallic-accent p-6" style="border-left: 4px solid var(--rose-gold);">
+                    <h3 class="text-xl font-semibold mb-4 flex items-center text-rose-gold">
+                        <i class="fas fa-microchip mr-3"></i>Architecture
+                    </h3>
+                    <ul class="space-y-3 text-gray-200">
+                        <li>• <strong>Tokens:</strong> The fundamental 'unit of power' for AI model training and inference</li>
+                        <li>• <strong>High-Volume Production:</strong> Cost-effective token generation at scale</li>
+                        <li>• <strong>NVIDIA GPU Power:</strong> Latest generation processors optimised for AI workloads</li>
+                        <li>• <strong>Scalable Infrastructure:</strong> Designed to meet exponential demand growth</li>
+                    </ul>
+                </div>
+
+                <div class="premium-card metallic-accent p-6" style="border-left: 4px solid var(--rose-gold);">
+                    <h3 class="text-xl font-semibold mb-4 flex items-center text-rose-gold">
+                        <i class="fas fa-shield-alt mr-3"></i>Secure Token Pipelines
+                    </h3>
+                    <ul class="space-y-3 text-gray-200">
+                        <li>• <strong>Dedicated Channels:</strong> Government-exclusive token delivery systems via private ICON network </li>
+                        <li>• <strong>Supply Guarantee:</strong> Assured capacity for critical government operations</li>
+                        <li>• <strong>Security Classifications:</strong> PROTECTED and SECRET level token processing</li>
+                        <li>• <strong>Data Sovereignty:</strong> All tokens produced and processed within Australia</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="premium-card p-6 mb-6">
+                <h3 class="text-xl font-semibold mb-4 text-metallic">
+                    <i class="fas fa-cogs mr-2"></i>Megacluster Capabilities
+                </h3>
+                <div class="grid md:grid-cols-4 gap-4">
+                    <div class="premium-card metallic-accent p-4 text-center" style="border-left: 4px solid var(--rose-gold);">
+                        <h4 class="font-semibold text-rose-gold">Token Capacity</h4>
+                        <p class="text-2xl font-bold text-white">400 Million</p>
+                        <p class="text-sm text-gray-200">Per Hour</p>
+                    </div>
+                    <div class="premium-card metallic-accent p-4 text-center" style="border-left: 4px solid var(--rose-gold);">
+                        <h4 class="font-semibold text-rose-gold">GPU Deployment</h4>
+                        <p class="text-2xl font-bold text-white">64+</p>
+                        <p class="text-sm text-gray-200">NVIDIA RTX 6000</p>
+                    </div>
+                    <div class="premium-card metallic-accent p-4 text-center" style="border-left: 4px solid var(--rose-gold);">
+                        <h4 class="font-semibold text-rose-gold">Reliability</h4>
+                        <p class="text-2xl font-bold text-white">99.9%</p>
+                        <p class="text-sm text-gray-200">Uptime SLA</p>
+                    </div>
+                    <div class="premium-card metallic-accent p-4 text-center" style="border-left: 4px solid var(--rose-gold);">
+                        <h4 class="font-semibold text-rose-gold">Security</h4>
+                        <p class="text-2xl font-bold text-white">IRAP</p>
+                        <p class="text-sm text-gray-200">Certified</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="premium-card p-6 mb-6">
+                <h3 class="text-xl font-semibold mb-4 text-metallic">Technical Specifications</h3>
+                <div class="grid md:grid-cols-4 gap-4">
+                    <div class="premium-card metallic-accent p-4 text-center" style="border-left: 4px solid var(--rose-gold);">
+                        <h4 class="font-semibold text-rose-gold">Total GPUs</h4>
+                        <p class="text-2xl font-bold text-white">1024</p>
+                        <p class="text-sm text-gray-200">NVIDIA RTX 6000</p>
+                    </div>
+                    <div class="premium-card metallic-accent p-4 text-center" style="border-left: 4px solid var(--rose-gold);">
+                        <h4 class="font-semibold text-rose-gold">Total VRAM</h4>
+                        <p class="text-2xl font-bold text-white">90,304GB</p>
+                        <p class="text-sm text-gray-200">GPU Memory</p>
+                    </div>
+                    <div class="premium-card metallic-accent p-4 text-center" style="border-left: 4px solid var(--rose-gold);">
+                        <h4 class="font-semibold text-rose-gold">Total RAM</h4>
+                        <p class="text-2xl font-bold text-white">147TB</p>
+                        <p class="text-sm text-gray-200">System Memory</p>
+                    </div>
+                    <div class="premium-card metallic-accent p-4 text-center" style="border-left: 4px solid var(--rose-gold);">
+                        <h4 class="font-semibold text-rose-gold">Storage</h4>
+                        <p class="text-2xl font-bold text-white">6144TB</p>
+                        <p class="text-sm text-gray-200">NVMe SSD</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="premium-card metallic-accent p-6" style="border-left: 4px solid var(--rose-gold);">
+                    <h4 class="text-lg font-semibold mb-3 text-rose-gold">Government Solutions</h4>
+                    <ul class="space-y-2 text-gray-200">
+                        <li>• Dedicated token allocation for each agency</li>
+                        <li>• Secure, isolated processing environments</li>
+                        <li>• Compliance with Australian government standards</li>
+                        <li>• 24/7 support and monitoring</li>
+                        <li>• Disaster recovery and business continuity</li>
+                    </ul>
+                </div>
+                
+                <div class="premium-card metallic-accent p-6" style="border-left: 4px solid var(--rose-gold);">
+                    <h4 class="text-lg font-semibold mb-3 text-rose-gold">Enterprise Benefits</h4>
+                    <ul class="space-y-2 text-gray-200">
+                        <li>• Cost-effective token pricing at scale</li>
+                        <li>• Reduced latency for Australian operations</li>
+                        <li>• Local data processing and storage</li>
+                        <li>• Flexible capacity scaling</li>
+                        <li>• Integration with existing systems</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Government Market Opportunity -->
+        <section class="p-8 border-b border-gray-200">
+            <h2 class="text-4xl font-bold section-header flex items-center">
+                <i class="fas fa-chart-area mr-4 icon-metallic"></i>Government Market Opportunity
+            </h2>
+            
+            <div class="mb-8">
+                <div class="premium-card p-6">
+                    <h3 class="text-xl font-semibold mb-4 text-metallic">Australian AI Market Growth</h3>
+                    <div class="chart-container">
+                        <canvas id="marketGrowthChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6 mb-8">
+                <div class="premium-card metallic-accent p-6" style="border-left: 4px solid var(--rose-gold);">
+                    <h4 class="text-lg font-semibold mb-3 text-rose-gold">Federal Government</h4>
+                    <div class="text-center">
+                        <p class="text-4xl font-bold text-white">$2.8B</p>
+                        <p class="text-sm text-rose-gold">4-Year IT Investment</p>
+                    </div>
+                    <ul class="space-y-2 mt-4 text-sm text-gray-200">
+                        <li>• 18 major departments</li>
+                        <li>• 150+ agencies and entities</li>
+                        <li>• $21.6M dedicated AI integration</li>
+                        <li>• Growing digital transformation</li>
+                    </ul>
+                </div>
+                
+                <div class="premium-card metallic-accent p-6" style="border-left: 4px solid var(--rose-gold);">
+                    <h4 class="text-lg font-semibold mb-3 text-rose-gold">Research Sector</h4>
+                    <div class="text-center">
+                        <p class="text-4xl font-bold text-white">$4.96B</p>
+                        <p class="text-sm text-rose-gold">R&D Investment</p>
+                    </div>
+                    <ul class="space-y-2 mt-4 text-sm text-gray-200">
+                        <li>• CSIRO and research institutes</li>
+                        <li>• University partnerships</li>
+                        <li>• Scientific computing needs</li>
+                        <li>• High-performance workloads</li>
+                    </ul>
+                </div>
+                
+                <div class="premium-card metallic-accent p-6" style="border-left: 4px solid var(--rose-gold);">
+                    <h4 class="text-lg font-semibold mb-3 text-rose-gold">Enterprise Market</h4>
+                    <div class="text-center">
+                        <p class="text-4xl font-bold text-white">$43.7B</p>
+                        <p class="text-sm text-rose-gold">2034 AI Market</p>
+                    </div>
+                    <ul class="space-y-2 mt-4 text-sm text-gray-200">
+                        <li>• Financial services compliance</li>
+                        <li>• Healthcare data sovereignty</li>
+                        <li>• Critical infrastructure</li>
+                        <li>• Government contractors</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="premium-card p-6">
+                <h3 class="text-xl font-semibold mb-4 text-metallic">Security Classifications & Target Market</h3>
+                <div class="grid md:grid-cols-4 gap-4">
+                    <div class="bg-gray-100 p-4 rounded-lg text-center border border-gray-300">
+                        <h4 class="font-semibold text-gunmetal">OFFICIAL</h4>
+                        <p class="text-sm text-gunmetal">No clearance</p>
+                    </div>
+                    <div class="metallic-accent p-4 rounded-lg text-center border-2 border-metallic">
+                        <h4 class="font-semibold text-white">PROTECTED</h4>
+                        <p class="text-sm text-gray-200">Baseline clearance</p>
+                    </div>
+                    <div class="metallic-accent p-4 rounded-lg text-center border-2 border-metallic">
+                        <h4 class="font-semibold text-white">SECRET</h4>
+                        <p class="text-sm text-gray-200">Negative vetting 1</p>
+                    </div>
+                    <div class="bg-gray-200 p-4 rounded-lg text-center border border-gray-400">
+                        <h4 class="font-semibold text-gunmetal">TOP SECRET</h4>
+                        <p class="text-sm text-gunmetal">Negative vetting 2</p>
+                    </div>
+                </div>
+                <p class="text-center mt-4 text-gunmetal font-semibold">PROTECTED and SECRET classifications represent 95% of the addressable market</p>
+            </div>
+        </section>
+
+        <!-- Seed Funding Requirements -->
+        <section class="p-8 border-b border-gray-200">
+            <h2 class="text-4xl font-bold section-header flex items-center">
+                <i class="fas fa-dollar-sign mr-4" style="color: var(--success-green);"></i>Seed Funding Requirements
+            </h2>
+            
+            <div class="premium-card bg-success p-6 mb-8">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4" style="color: var(--success-green);">Funding Overview</h3>
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center p-3 bg-white rounded-lg">
+                                <span class="font-semibold text-metallic">Funding Target:</span>
+                                <span class="font-semibold text-metallic">$10.0M</span>
+                            </div>
+                            <div class="flex justify-between items-center p-3 bg-white rounded-lg">
+                                <span class="font-semibold text-metallic">Structure:</span>
+                                <span class="font-semibold text-metallic">SAFE</span>
+                            </div>
+                            <div class="flex justify-between items-center p-3 bg-white rounded-lg">
+                                <span class="font-semibold text-metallic">Valuation Cap:</span>
+                                <span class="font-semibold text-metallic">$50M</span>
+                            </div>
+                            <div class="flex justify-between items-center p-3 bg-white rounded-lg">
+                                <span class="font-semibold text-metallic">Discount:</span>
+                                <span class="font-semibold text-metallic">20%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4 text-gunmetal">Fund Allocation</h3>
+                        <div class="chart-container">
+                            <canvas id="fundAllocationChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6 mb-8">
+                <div class="premium-card metallic-accent p-6" style="border-left: 4px solid var(--rose-gold);">
+                    <h4 class="text-lg font-semibold mb-4 text-rose-gold">Hardware & Infrastructure</h4>
+                    <div class="text-center">
+                        <p class="text-2xl font-bold text-white">$5.5M (55%)</p>
+                    </div>
+                    <ul class="space-y-2 text-sm text-gray-200 mt-4">
+                        <li>• GPU Servers (64 NVIDIA RTX 6000)</li>
+                        <li>• Enterprise networking & storage</li>
+                        <li>• Security & compliance hardware</li>
+                        <li>• Data center infrastructure</li>
+                    </ul>
+                </div>
+                
+                <div class="premium-card metallic-accent p-6" style="border-left: 4px solid var(--rose-gold);">
+                    <h4 class="text-lg font-semibold mb-4 text-rose-gold">Annual Operations</h4>
+                    <div class="text-center">
+                        <p class="text-2xl font-bold text-white">$4.0M (40%)</p>
+                    </div>
+                    <ul class="space-y-2 text-sm text-gray-200 mt-4">
+                        <li>• Core technical team (CTO, developers)</li>
+                        <li>• Sales & business development</li>
+                        <li>• Data center operations</li>
+                        <li>• Marketing & events</li>
+                    </ul>
+                </div>
+                
+                <div class="premium-card metallic-accent p-6" style="border-left: 4px solid var(--rose-gold);">
+                    <h4 class="text-lg font-semibold mb-4 text-rose-gold">Licensing & Accreditation</h4>
+                    <div class="text-center">
+                        <p class="text-2xl font-bold text-white">$500K (5%)</p>
+                    </div>
+                    <ul class="space-y-2 text-sm text-gray-200 mt-4">
+                        <li>• IRAP certification consultants</li>
+                        <li>• Government security clearances</li>
+                        <li>• Compliance & audit requirements</li>
+                        <li>• Legal & regulatory setup</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Financial Projections -->
+        <section class="p-8 border-b border-gray-200">
+            <h2 class="text-4xl font-bold section-header flex items-center">
+                <i class="fas fa-calculator mr-4 icon-metallic"></i>Financial Projections
+            </h2>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <div class="premium-card p-6">
+                    <h3 class="text-xl font-semibold mb-4 text-metallic">Revenue Growth Projection</h3>
+                    <div class="chart-container">
+                        <canvas id="revenueProjectionChart"></canvas>
+                    </div>
+                </div>
+                
+                <div class="premium-card p-6">
+                    <h3 class="text-xl font-semibold mb-4 text-metallic">Monthly Cost Structure</h3>
+                    <div class="chart-container">
+                        <canvas id="costStructureChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="premium-card metallic-accent p-6" style="border-left: 4px solid var(--rose-gold);">
+                    <h4 class="text-lg font-semibold mb-4 text-rose-gold">Revenue Streams</h4>
+                    <ul class="space-y-3 text-gray-200">
+                        <li class="flex justify-between">
+                            <span>GPU Marketplaces:</span>
+                            <span class="font-semibold text-white">$93K/month</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Direct Contracts:</span>
+                            <span class="font-semibold text-white">Growing</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Storage Services:</span>
+                            <span class="font-semibold text-white">Additional</span>
+                        </li>
+                        <li class="border-t pt-2 flex justify-between">
+                            <span><strong>Year 1 Target:</strong></span>
+                            <span class="font-bold text-white">$1.12M</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="premium-card metallic-accent p-6" style="border-left: 4px solid var(--rose-gold);">
+                    <h4 class="text-lg font-semibold mb-4 text-rose-gold">Path to Profitability</h4>
+                    <ul class="space-y-3 text-gray-200">
+                        <li class="flex justify-between">
+                            <span>Month 1-6:</span>
+                            <span class="font-semibold text-white">Infrastructure & accreditation</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Month 6-12:</span>
+                            <span class="font-semibold text-white">Revenue generation</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Month 12+:</span>
+                            <span class="font-semibold text-white">Government contracts</span>
+                        </li>
+                        <li class="border-t pt-2 flex justify-between">
+                            <span><strong>Break-even:</strong></span>
+                            <span class="font-bold text-white">Month 18-24</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- CoreWeave Blueprint -->
+        <section class="p-8 border-b border-gray-200">
+            <h2 class="text-4xl font-bold section-header flex items-center">
+                <i class="fas fa-rocket mr-4 icon-metallic"></i>Proven Market Model: CoreWeave Blueprint
+            </h2>
+            
+            <div class="premium-card metallic-accent p-6 mb-8" style="border-left: 4px solid var(--rose-gold);">
+                <h3 class="text-2xl font-semibold mb-4 text-rose-gold">Validated Demand for Sovereign AI Infrastructure</h3>
+                <p class="mb-4 leading-relaxed text-white">CoreWeave's extraordinary growth and high margin of 62% demonstrates the explosive opportunity for AI infrastructure providers. This provides the blueprint while demonstrating the model Australia must replicate to maintain technological independence.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="premium-card metallic-accent p-6" style="border-left: 4px solid var(--rose-gold);">
+                    <h4 class="text-lg font-semibold mb-2 text-rose-gold">Q2 2025 Revenue</h4>
+                    <div class="text-center">
+                        <p class="text-4xl font-bold text-white">$1.21B</p>
+                        <p class="text-sm text-gray-200">207% YoY Growth</p>
+                    </div>
+                </div>
+                
+                <div class="premium-card metallic-accent p-6" style="border-left: 4px solid var(--rose-gold);">
+                    <h4 class="text-lg font-semibold mb-2 text-rose-gold">Revenue Backlog</h4>
+                    <div class="text-center">
+                        <p class="text-4xl font-bold text-white">$30.1B</p>
+                        <p class="text-sm text-gray-200">Contracted Future Revenue</p>
+                    </div>
+                </div>
+                
+                <div class="premium-card metallic-accent p-6" style="border-left: 4px solid var(--rose-gold);">
+                    <h4 class="text-lg font-semibold mb-2 text-rose-gold">Adjusted EBITDA</h4>
+                    <div class="text-center">
+                        <p class="text-4xl font-bold text-white">$753M</p>
+                        <p class="text-sm text-gray-200">62% Margin</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Implementation Roadmap -->
+        <section class="p-8 border-b border-gray-200">
+            <h2 class="text-4xl font-bold section-header flex items-center">
+                <i class="fas fa-road mr-4 icon-metallic"></i>Implementation Roadmap
+            </h2>
+            
+            <div class="relative">
+                <div class="absolute left-8 top-0 bottom-0 w-1" style="background: var(--rose-gold);"></div>
+                
+                <div class="space-y-8">
+                    <div class="relative flex items-start">
+                        <div class="flex-shrink-0 w-16 h-16 rounded-full flex items-center justify-center text-white font-bold text-lg metallic-accent">1</div>
+                        <div class="ml-6 premium-card p-6 flex-1">
+                            <h3 class="text-xl font-semibold mb-2 text-metallic">Phase 1: Foundation (9 months)</h3>
+                            <ul class="space-y-2 text-gunmetal">
+                                <li>• <strong>Establish first rack (8 GPU servers)</strong> - Core infrastructure deployment</li>
+                                <li>• <strong>Commence sales pipeline</strong> - Government agency outreach and relationship building</li>
+                                <li>• <strong>Secure 2x PoCs or LOIs</strong> - Proof of concepts with target agencies</li>
+                                <li>• <strong>Sell compute into AI marketplaces</strong> - Immediate revenue generation</li>
+                            </ul>
+                            <div class="mt-4 bg-gray-100 p-3 rounded">
+                                <p class="text-metallic font-semibold">Success Metrics: Infrastructure operational, IRAP process initiated, first revenue streams</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="relative flex items-start">
+                        <div class="flex-shrink-0 w-16 h-16 rounded-full flex items-center justify-center text-white font-bold text-lg metallic-accent">2</div>
+                        <div class="ml-6 premium-card p-6 flex-1">
+                            <h3 class="text-xl font-semibold mb-2 text-metallic">Phase 2: Market Penetration (12 months)</h3>
+                            <ul class="space-y-2 text-gunmetal">
+                                <li>• <strong>Commence PoCs with at least two agencies</strong> - Active government partnerships</li>
+                                <li>• <strong>Secure 5 more PoCs</strong> - Expand agency relationships</li>
+                                <li>• <strong>Secure at least 1 contract</strong> - First government contract signed</li>
+                                <li>• Complete IRAP accreditation process for PROTECTED clearance</li>
+                            </ul>
+                            <div class="mt-4 bg-gray-100 p-3 rounded">
+                                <p class="text-metallic font-semibold">Success Metrics: Government contracts secured, PROTECTED clearance achieved</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="relative flex items-start">
+                        <div class="flex-shrink-0 w-16 h-16 rounded-full flex items-center justify-center text-white font-bold text-lg metallic-accent">3</div>
+                        <div class="ml-6 premium-card p-6 flex-1">
+                            <h3 class="text-xl font-semibold mb-2 text-metallic">Phase 3: Strategic Expansion</h3>
+                            <ul class="space-y-2 text-gunmetal">
+                                <li>• <strong>Secure defense contract</strong> - Department of Defence partnership</li>
+                                <li>• <strong>Secure research contract</strong> - CSIRO and university partnerships</li>
+                                <li>• Pursue Secret clearance level capabilities</li>
+                                <li>• Prepare for Series A funding and infrastructure scaling</li>
+                            </ul>
+                            <div class="mt-4 bg-gray-100 p-3 rounded">
+                                <p class="text-metallic font-semibold">Success Metrics: Defense & research partnerships, Secret clearance pathway</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 premium-card p-6">
+                <h3 class="text-xl font-semibold mb-4 text-metallic">Phase 2 Scaling Requirements</h3>
+                <p class="text-gunmetal mb-4">Phase 2 will require additional capital raising to support full infrastructure expansion, targeting Series A funding for nationwide deployment and advanced clearance capabilities.</p>
+                <div class="grid md:grid-cols-3 gap-4">
+                    <div class="bg-gray-50 p-4 rounded-lg text-center border border-gray-200">
+                        <h4 class="font-semibold text-gunmetal">Additional Infrastructure</h4>
+                        <p class="text-lg font-bold text-rose-gold">8-16 Racks</p>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg text-center border border-gray-200">
+                        <h4 class="font-semibold text-gunmetal">Estimated Investment</h4>
+                        <p class="text-lg font-bold" style="color: var(--success-green);">$25-50M</p>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg text-center border border-gray-200">
+                        <h4 class="font-semibold text-gunmetal">Target Timeline</h4>
+                        <p class="text-lg font-bold text-metallic">18-24 Months</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conclusion -->
+        <section class="p-8 metallic-accent">
+            <h2 class="text-4xl font-bold mb-6 flex items-center text-white">
+                <i class="fas fa-flag mr-3"></i>The Strategic Imperative
+            </h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-red-900 bg-opacity-50 p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-4" style="color: var(--problem-red);">
+                        <i class="fas fa-times-circle mr-2"></i>Cost of Inaction
+                    </h3>
+                    <ul class="space-y-2 text-gray-200">
+                        <li>• Permanent technological dependence on foreign infrastructure</li>
+                        <li>• Government agencies forced to compromise data sovereignty</li>
+                        <li>• Strategic vulnerability during geopolitical tensions</li>
+                        <li>• Loss of $2.8B government market to offshore providers</li>
+                        <li>• Continued export of Australian AI talent and capability</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-green-900 bg-opacity-50 p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-4" style="color: var(--success-green);">
+                        <i class="fas fa-check-circle mr-2"></i>First-Mover Advantage
+                    </h3>
+                    <ul class="space-y-2 text-gray-200">
+                        <li>• Capture 100% of sovereign AI cloud market</li>
+                        <li>• Build insurmountable regulatory moats via clearances</li>
+                        <li>• Establish long-term government partnerships</li>
+                        <li>• Conservative 46% funding buffer provides flexibility</li>
+                        <li>• Proven revenue model with immediate marketplace access</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="mt-8 text-center bg-white bg-opacity-10 p-8 rounded-lg">
+                <h3 class="text-2xl font-bold mb-4 text-white">Australia's AI Independence Moment</h3>
+                <p class="text-xl mb-6 text-gray-200">The sovereign AI megacluster represents Australia's declaration of technological independence. With $10M seed funding, we can build the foundation for national AI sovereignty while capturing a $2.8B government market with zero competition.</p>
+                <div class="grid md:grid-cols-3 gap-4 mt-6">
+                    <div class="p-4 rounded-lg rose-gold-accent">
+                        <p class="text-3xl font-bold">$10M</p>
+                        <p class="text-sm">Seed Investment</p>
+                    </div>
+                    <div class="p-4 rounded-lg rose-gold-accent">
+                        <p class="text-3xl font-bold">12 Months</p>
+                        <p class="text-sm">To Market Leadership</p>
+                    </div>
+                    <div class="p-4 rounded-lg rose-gold-accent">
+                        <p class="text-3xl font-bold">$52B</p>
+                        <p class="text-sm">Addressable Market</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="p-6 bg-gray-100 text-gray-600 text-sm">
+            <p class="text-center mb-2">
+                <strong>Investment Opportunity:</strong> This document presents a seed funding opportunity for Australia's first sovereign AI megacluster targeting government and enterprise markets.
+            </p>
+            <p class="text-center">
+                <strong>Sources:</strong> Australian Government Budget 2024-25, AGSVA security classifications, CoreWeave investor reports, industry analysis from IMARC and Statista. Financial projections based on detailed CAPEX/OPEX analysis and conservative market assumptions.
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        // Market Growth Chart - Full Width
+        const ctx1 = document.getElementById('marketGrowthChart').getContext('2d');
+        new Chart(ctx1, {
+            type: 'line',
+            data: {
+                labels: ['2024', '2025', '2026', '2027', '2028', '2029', '2030', '2031', '2032', '2033', '2034'],
+                datasets: [{
+                    label: 'Australian AI Market (AUD Billions)',
+                    data: [9.41, 11.0, 12.8, 15.0, 17.5, 20.4, 23.8, 27.7, 32.3, 37.7, 43.71],
+                    borderColor: '#1C2526',
+                    backgroundColor: 'rgba(28, 37, 38, 0.1)',
+                    tension: 0.3,
+                    fill: true,
+                    pointBackgroundColor: '#E8B4A0',
+                    pointBorderColor: '#1C2526',
+                    pointBorderWidth: 2,
+                    pointRadius: 5
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Market Size (AUD Billions)',
+                            color: '#2C3E40'
+                        },
+                        ticks: { color: '#2C3E40' }
+                    },
+                    x: {
+                        ticks: { color: '#2C3E40' }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        labels: { color: '#1C2526' }
+                    }
+                }
+            }
+        });
+
+        // Fund Allocation Chart - Updated with new percentages
+        const ctx3 = document.getElementById('fundAllocationChart').getContext('2d');
+        new Chart(ctx3, {
+            type: 'pie',
+            data: {
+                labels: ['Hardware & Infrastructure', 'Annual Operations', 'Licensing & Accreditation'],
+                datasets: [{
+                    data: [55, 40, 5],
+                    backgroundColor: [
+                        '#1C2526',
+                        '#E8B4A0',
+                        '#10B981'
+                    ],
+                    borderWidth: 2,
+                    borderColor: '#ffffff'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: { color: '#1C2526' }
+                    },
+                    title: {
+                        display: true,
+                        text: 'Fund Allocation ($10M Total)',
+                        color: '#1C2526'
+                    }
+                }
+            }
+        });
+
+        // Revenue Projection Chart
+        const ctx4 = document.getElementById('revenueProjectionChart').getContext('2d');
+        new Chart(ctx4, {
+            type: 'line',
+            data: {
+                labels: ['Month 1', 'Month 3', 'Month 6', 'Month 9', 'Month 12', 'Month 18', 'Month 24'],
+                datasets: [{
+                    label: 'Marketplace Revenue',
+                    data: [0, 30, 60, 90, 93, 93, 93],
+                    borderColor: '#10B981',
+                    backgroundColor: 'rgba(16, 185, 129, 0.1)',
+                    tension: 0.3,
+                    pointBackgroundColor: '#10B981',
+                    pointBorderColor: '#ffffff',
+                    pointBorderWidth: 2,
+                    pointRadius: 5
+                }, {
+                    label: 'Government Contracts',
+                    data: [0, 0, 0, 50, 100, 200, 350],
+                    borderColor: '#1C2526',
+                    backgroundColor: 'rgba(28, 37, 38, 0.1)',
+                    tension: 0.3,
+                    pointBackgroundColor: '#E8B4A0',
+                    pointBorderColor: '#1C2526',
+                    pointBorderWidth: 2,
+                    pointRadius: 5
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Monthly Revenue ($K)',
+                            color: '#2C3E40'
+                        },
+                        ticks: { color: '#2C3E40' }
+                    },
+                    x: {
+                        ticks: { color: '#2C3E40' }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        labels: { color: '#1C2526' }
+                    }
+                }
+            }
+        });
+
+        // Cost Structure Chart
+        const ctx5 = document.getElementById('costStructureChart').getContext('2d');
+        new Chart(ctx5, {
+            type: 'bar',
+            data: {
+                labels: ['Personnel', 'Infrastructure', 'Operations', 'Compliance'],
+                datasets: [{
+                    label: 'Monthly Costs ($K)',
+                    data: [155, 30, 50, 50],
+                    backgroundColor: [
+                        '#1C2526',
+                        '#E8B4A0',
+                        '#2C3E40',
+                        '#10B981'
+                    ],
+                    borderWidth: 1,
+                    borderColor: '#ffffff'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Monthly Cost ($K)',
+                            color: '#2C3E40'
+                        },
+                        ticks: { color: '#2C3E40' }
+                    },
+                    x: {
+                        ticks: { color: '#2C3E40' }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        labels: { color: '#1C2526' }
+                    }
+                }
+            }
+        });
+    </script>
 </body>
 </html>
